@@ -12,12 +12,6 @@ import java.util.*
 import kotlin.concurrent.schedule
 
 fun main() {
-    // every 30 min check if there are any new recordings in googleSheets and add data to tags entity
-    Timer("SettingUp", false).schedule(0, 1800000) {
-        val tagsFromGoogleSheets = parseTags("https://sheet2bot.herokuapp.com/api/rows?sheet=$SHEET_ID&range=$RANGE")
-        println(tagsFromGoogleSheets)
-        updateTagsAndDestination(tagsFromGoogleSheets)
-    }
     JaicpPollingConnector(
         templateBot,
         accessToken,

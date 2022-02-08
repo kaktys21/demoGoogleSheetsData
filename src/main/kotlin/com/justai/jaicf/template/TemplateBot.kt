@@ -21,14 +21,8 @@ val accessToken: String = System.getenv("JAICP_API_TOKEN") ?: Properties().run {
     getProperty("apiToken")
 }
 
-// var client: MongoClient = MongoClients.create("mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false")
-//var client: MongoClient = MongoClients.create("mongodb+srv://cluster0.4xxrk.mongodb.net/myFirstDatabase?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority")
-var client: MongoClient = MongoClients.create("mongodb+srv://kotlin:y75ZVsGq78rFvIeA@cluster0.4xxrk.mongodb.net/test")
-val myCollection: MongoCollection<Document> = client.getDatabase("jaicf").getCollection("googleSheets")
-
 private val cailaNLUSettings = CailaNLUSettings(
     accessToken = accessToken
-
 )
 
 val templateBot = BotEngine(
