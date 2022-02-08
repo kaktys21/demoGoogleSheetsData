@@ -1,14 +1,8 @@
 package com.justai.jaicf.template.scenario
 
-import com.justai.jaicf.activator.caila.*
 import com.justai.jaicf.builder.Scenario
 import com.justai.jaicf.channel.jaicp.reactions.jaicp
 import com.justai.jaicf.hook.*
-import com.justai.jaicf.template.scripts.*
-import com.justai.jaicf.test.context.runInTest
-import java.util.*
-
-typealias CitiesAndAmount = Pair<String, Int>
 
 val mainScenario = Scenario {
     handle<BotRequestHook> {
